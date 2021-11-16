@@ -1,0 +1,7 @@
+<form #login="ngForm" (ngSubmit)="validate(login.value)" >
+    <label>ENter username:</label>
+    <input type="text" id="txt1" name="AdminId" [(ngModel)]="Userlogin.AdminId"/><br/>
+    <label>ENter password:</label>
+    <input type="password" id="txt2" name="AdminPassword" [(ngModel)]="Userlogin.AdminPassword" /><br/>
+    <input type="submit" value="submit"/>
+</form>
