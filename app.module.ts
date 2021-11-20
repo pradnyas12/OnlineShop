@@ -9,11 +9,24 @@ import { LoginComponent } from './login/login.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import routes,{ AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { HomepageComponent } from './homepage/homepage.component';
+// import { ProductComponent } from './product/product.component';
+import { MyProductService } from './my-product.service';
+import { ShowProductComponent } from './show-product/show-product.component';
+import { ShowProductSpeakerComponent } from './show-product-speaker/show-product-speaker.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    HomepageComponent,
+    ShowProductComponent,
+    ShowProductSpeakerComponent
+    // ProductComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -23,8 +36,10 @@ import { FormsModule } from '@angular/forms';
     FormsModule
 
   ],
-  providers: [MyloginService],
-  bootstrap: [AppComponent],
+  providers: [MyloginService, MyProductService],
+   bootstrap: [ShowProductComponent]
+  // [ShowProductSpeakerComponent]
+  
 
 })
 export class AppModule { }
